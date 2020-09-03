@@ -2,7 +2,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
-require('dotenv').config();
+require("dotenv").config();
 
 /* import files */
 
@@ -23,7 +23,6 @@ mongoose
     console.log(err);
   });
 
-
 /* middleware */
 Server.use(express.static("./public"));
 Server.use(express.json());
@@ -39,5 +38,5 @@ Server.route("/api").post((req, res) => {
 
 // Server
 Server.listen(PORT, () => {
-  console.log("server started..." + process.env.TEST);
+  console.log("server started...");
 });
