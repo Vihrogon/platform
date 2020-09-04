@@ -1,17 +1,18 @@
 /* modules and dependencies */
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
-const jwt = require("jsonwebtoken");
-require("dotenv").config();
+// const jwt = require("jsonwebtoken");
 
 /* import files */
 
 /* init */
 const Server = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000; /* eslint-disable-line no-undef */
 
 /* database */
 mongoose
+  /* eslint-disable-next-line no-undef */
   .connect(process.env.DB, {
     useNewUrlParser: true,
     useUnifiedTopology: true
