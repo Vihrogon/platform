@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>test page for the project</title>
+  </head>
+  <body>
+    <input
+      type="text"
+      class="url"
+      value="https://dfmor.sse.codesandbox.io/api"
+    /><br />
+    <textarea class="data">{"test": "test data"}</textarea><br />
+    <button onclick="send()">send</button>
+    <script>
+      function send() {
+        let url = document.querySelector(".url").value;
+        let data = document.querySelector(".data").value;
+        fetch(url, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: data
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log("Success:", data);
+          });
+      }
+    </script>
+  </body>
+</html>
