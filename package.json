@@ -4,8 +4,8 @@
   "description": "Site with a Nodejs API backend and a React frontend",
   "main": "Server.js",
   "scripts": {
-    "backend": "node Server.js",
-    "backend:dev": "nodemon Server.js",
+    "start": "node Server.js",
+    "server": "nodemon Server.js",
     "lint": "eslint '**/*.js' --ignore-pattern node_modules/"
   },
   "repository": {
