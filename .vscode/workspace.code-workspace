@@ -4,10 +4,5 @@
 			"path": ".."
 		}
 	],
-	"settings": {
-		"deno.enable": true,
-		"deno.lint": true,
-		"deno.unstable": true,
-		"editor.defaultFormatter": "denoland.vscode-deno",
-	}
+	"settings": {}
 }
